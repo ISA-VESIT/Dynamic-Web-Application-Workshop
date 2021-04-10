@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@600&display=swap');
+        
+        .type-1 {
+            background-color: #fafafa;
+            border:0;
+            height: 40px;
+            width: 250px;
+            box-shadow:0 0 4px rgba(0,0,0,0.3);
+            transition: .3s box-shadow;
+          }
+          .type-1:hover {
+            box-shadow:0 0 4px rgba(0,0,0,0.5);
+          }
+          
+
+        button {
+            font-family: 'Vollkorn', serif;
+            display: inline-block;
+            background-color: #18227c;
+            border-radius: 10px;
+            border: 4px double #cccccc;
+            color: #eeeeee;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+          }
+
+          .imgstyle{
+            border-radius: 10px;
+            height: 300px;
+            width: 300px;
+            box-shadow: 0 4px 8px 0 rgba(134, 182, 184, 0.65), 0 6px 20px 0 rgba(184, 163, 163, 0.65);
+        }
+        .teamnamestyle{
+            color: rgb(231, 204, 204);
+        }
+        .tropynostyle{
+            color: rgb(213, 213, 230);
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
