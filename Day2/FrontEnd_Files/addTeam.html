@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Team</title>
+    
+    <script>
+        function handleFormData(){
+    
+            var name = document.getElementById('name').value;
+            var logo = document.getElementById('logo').value;
+
+            var dict = {
+                    "name": name,
+                    "logo": logo,
+                    "trophies": 0
+                 }
+
+            fetch('http://127.0.0.1:8000/api/list/create/', {
+                method: 'POST',
+                headers : {
+                    'Content-type':'application/json',
+                },
+                body: JSON.stringify(dict)
+
+            
+            }).then(res => res.json())
+              .then(res => console.log(res))
+              .catch(function() {
+        console.log("error");
+    })
+              
+    
+         }
+        </script>
+
+</head>
+<body  style="text-align: center; font-family: 'Vollkorn', serif; background-color:rgb(248, 239, 239);">
+
+    <form>
+        <legend><h3>Name:</h3></legend>
+        <input class="type-1" type="text" id="name" /><br><br>
+        <legend><h3>Trophies:</h3></legend>
+        <input class="type-1" type="text" id='trophies'><br><br>
+        <legend><h3>Enter Logo url</h3></legend>
+        <input class="type-1" type="text" id='logo'><br><br>
+        <button  type="button" onclick="handleFormData()">Add a team</button>
+    </form>
+
+    
+    
+</body>
+</html>
